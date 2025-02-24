@@ -1,35 +1,16 @@
-AVVIO
-- Avvio terminale 1: 
-    cd stravel
-    cd server
-    python3 AX_server.py
-- Avvio terminale 2: 
-    cd stravel
-    cd server
-    python3 AX_auth.py
-- Avvio terminale 3:
-    cd stravel
-    cd server
-    python3 AX_data.py
-- Avvio terminale 4
-    cd stravel
-    npm run web
+LOGICA S Travel
 
-APPLICAZIONE
-Component Login
-- Login: 
-    email: maurizio.nataloni@stravel.it
-    password: uforobot
-
-S Travel
-S Travel è un'applicazione che offre un servizio per la ricerca di hotel e la prenotazione di mezzi di trasporto (voli e treni) in diverse città italiane. Grazie a un'interfaccia semplice e intuitiva, gli utenti possono trovare opzioni di viaggio, selezionare la destinazione, e prenotare servizi come voli o treni, tutto tramite un'applicazione React.
+S Travel offre
+- ricerca di hotel 
+- prenotazione di mezzi di trasporto (voli e treni) in diverse città italiane. 
 
 Tecnologie utilizzate
-React: Per il frontend dell'applicazione (app mobile).
-Axios: Per la gestione delle richieste HTTP verso il backend.
-JSON: Per la gestione dei dati e la comunicazione tra client e server.
-Python (Flask): Per i server middleware che gestiscono le richieste e risposte al database.
-Database relazionale: Per la gestione dei dati, come informazioni sugli utenti e sulle disponibilità di voli e hotel.
+- React: Per il frontend dell'applicazione (app mobile).
+- Axios: Per la gestione delle richieste HTTP verso il backend.
+- JSON: Per la gestione dei dati e la comunicazione tra client e server.
+- Python (Flask): Per i server middleware che gestiscono le richieste e risposte al database.
+- Database relazionale: Per la gestione dei dati, come informazioni sugli utenti e sulle disponibilità di voli e hotel.
+
 Funzionalità principali
 Ricerca hotel: Trova hotel nelle città in cui il servizio è attivo.
 Prenotazione di voli e treni: Prenota voli aerei e treni tra diverse città italiane.
@@ -52,24 +33,42 @@ Requisiti
 Node.js
 Python
 Database relazionale (MySQL/PostgreSQL)
-Passaggi di installazione
+
+INSTALLAZIONE
+
 Clona il repository:
+bash: git clone <URL del progetto>
 
-bash
-Copia codice
-git clone <URL del progetto>
-Installa le dipendenze per il frontend:
+Aprire la cartella di progetto
+se ci si trova dentro la cartella esame_native_ok 
+    cd stravel
+verificare si sia dentro la cartella stravel
 
-bash
-Copia codice
-cd client
+# Installazione dei pacchetti Node.js
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+
+# Installazione delle dipendenze Node.js
 npm install
-Installa le dipendenze per il backend (server finale e server middleware):
+npm install @react-navigation/native @react-navigation/stack
+npm install react-native-screens
+npm install react-native-safe-area-context
+npm install @react-native-community/viewpager
+npm install react-native-gesture-handler react-native-reanimated
+npm install react-native-modal
+npm install react-native-paper
+npm install axios
+npm install redux react-redux
 
-bash
-Copia codice
-cd backend
-pip install -r requirements.txt
+# Installazione dei pacchetti Python
+sudo apt-get install python3-pip
+pip3 install Flask
+pip3 install flask-cors
+pip3 install psycopg2
+pip3 install psycopg2-binary
+
+
 Avvia i server:
 
 Server finale: python app.py
@@ -77,12 +76,29 @@ Server middleware autorizzazioni: python auth_server.py
 Server middleware gestione dati: python data_server.py
 Avvia il client:
 
-bash
-Copia codice
-npm start
-Licenza
-S Travel è un progetto gratuito. Puoi utilizzarlo e modificarlo a tuo piacimento.
 
-Contributi
-Se desideri contribuire al progetto, puoi fare un fork, creare una branch e inviare una pull request. Ogni contributo è benvenuto!
 
+AVVIO
+- Avvio terminale 1: 
+    cd stravel
+    cd server
+    python3 AX_server.py
+- Avvio terminale 2: 
+    cd stravel
+    cd server
+    python3 AX_auth.py
+- Avvio terminale 3:
+    cd stravel
+    cd server
+    python3 AX_data.py
+- Avvio terminale 4
+    cd stravel
+    npm run web
+
+
+
+UTILIZZO APPLICAZIONE
+Component Login
+- Login: 
+    email: maurizio.nataloni@stravel.it
+    password: uforobot
