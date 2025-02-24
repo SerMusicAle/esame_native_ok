@@ -1,0 +1,178 @@
+[
+    {
+      "id": 1,
+      "citta": "Roma",
+      "indirizzo": "Via del Corso, 25",
+      "nome": "Hotel Roma Centrale",
+      "costostanza": 150.00
+    },
+    {
+      "id": 2,
+      "citta": "Roma",
+      "indirizzo": "Via Nazionale, 45",
+      "nome": "Hotel Nazionale",
+      "costostanza": 180.00
+    },
+    {
+      "id": 3,
+      "citta": "Roma",
+      "indirizzo": "Piazza di Spagna, 10",
+      "nome": "Hotel Spagna",
+      "costostanza": 200.00
+    },
+    {
+      "id": 4,
+      "citta": "Roma",
+      "indirizzo": "Via dei Fori Imperiali, 5",
+      "nome": "Hotel Colosseo",
+      "costostanza": 250.00
+    },
+    {
+      "id": 5,
+      "citta": "Roma",
+      "indirizzo": "Via Vittorio Emanuele, 15",
+      "nome": "Hotel Emanuele",
+      "costostanza": 120.00
+    },
+    {
+      "id": 6,
+      "citta": "Milano",
+      "indirizzo": "Corso Buenos Aires, 14",
+      "nome": "Hotel Milano City",
+      "costostanza": 120.00
+    },
+    {
+      "id": 7,
+      "citta": "Milano",
+      "indirizzo": "Piazza Duomo, 3",
+      "nome": "Hotel Duomo Milano",
+      "costostanza": 220.00
+    },
+    {
+      "id": 8,
+      "citta": "Milano",
+      "indirizzo": "Via Montenapoleone, 8",
+      "nome": "Hotel Luxury Milano",
+      "costostanza": 350.00
+    },
+    {
+      "id": 9,
+      "citta": "Milano",
+      "indirizzo": "Viale Monza, 15",
+      "nome": "Hotel Monza Central",
+      "costostanza": 110.00
+    },
+    {
+      "id": 10,
+      "citta": "Milano",
+      "indirizzo": "Corso Venezia, 28",
+      "nome": "Hotel Venezia",
+      "costostanza": 140.00
+    },
+    {
+      "id": 11,
+      "citta": "Napoli",
+      "indirizzo": "Via Toledo, 33",
+      "nome": "Hotel Napoli Mare",
+      "costostanza": 100.00
+    },
+    {
+      "id": 12,
+      "citta": "Napoli",
+      "indirizzo": "Piazza del Plebiscito, 2",
+      "nome": "Hotel Plebiscito",
+      "costostanza": 130.00
+    },
+    {
+      "id": 13,
+      "citta": "Napoli",
+      "indirizzo": "Via Chiaia, 17",
+      "nome": "Hotel Chiaia",
+      "costostanza": 140.00
+    },
+    {
+      "id": 14,
+      "citta": "Napoli",
+      "indirizzo": "Corso Umberto, 25",
+      "nome": "Hotel Umberto",
+      "costostanza": 110.00
+    },
+    {
+      "id": 15,
+      "citta": "Napoli",
+      "indirizzo": "Via Posillipo, 12",
+      "nome": "Hotel Posillipo",
+      "costostanza": 150.00
+    },
+    {
+      "id": 16,
+      "citta": "Firenze",
+      "indirizzo": "Piazza della Signoria, 2",
+      "nome": "Hotel Firenze Art",
+      "costostanza": 130.00
+    },
+    {
+      "id": 17,
+      "citta": "Firenze",
+      "indirizzo": "Via della Vigna Nuova, 5",
+      "nome": "Hotel Vigna Nuova",
+      "costostanza": 160.00
+    },
+    {
+      "id": 18,
+      "citta": "Firenze",
+      "indirizzo": "Piazza del Duomo, 8",
+      "nome": "Hotel Duomo Firenze",
+      "costostanza": 180.00
+    },
+    {
+      "id": 19,
+      "citta": "Firenze",
+      "indirizzo": "Via dei Calzaiuoli, 20",
+      "nome": "Hotel Calzaiuoli",
+      "costostanza": 140.00
+    },
+    {
+      "id": 20,
+      "citta": "Firenze",
+      "indirizzo": "Viale Machiavelli, 25",
+      "nome": "Hotel Machiavelli",
+      "costostanza": 150.00
+    },
+    {
+      "id": 21,
+      "citta": "Torino",
+      "indirizzo": "Piazza Castello, 1",
+      "nome": "Hotel Torino Grand",
+      "costostanza": 140.00
+    },
+    {
+      "id": 22,
+      "citta": "Torino",
+      "indirizzo": "Corso Vittorio Emanuele, 9",
+      "nome": "Hotel Emanuele Torino",
+      "costostanza": 130.00
+    },
+    {
+      "id": 23,
+      "citta": "Torino",
+      "indirizzo": "Via Roma, 10",
+      "nome": "Hotel Roma Torino",
+      "costostanza": 120.00
+    },
+    {
+      "id": 24,
+      "citta": "Torino",
+      "indirizzo": "Corso Stati Uniti, 5",
+      "nome": "Hotel Stati Uniti",
+      "costostanza": 160.00
+    },
+    {
+      "id": 25,
+      "citta": "Torino",
+      "indirizzo": "Piazza San Carlo, 6",
+      "nome": "Hotel San Carlo",
+      "costostanza": 180.00
+    }
+  ]
+  

@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "compagnia": "Trenitalia",
+      "dataora_partenza": "2025-03-02T09:00:00",
+      "dataora_arrivo": "2025-03-02T11:00:00",
+      "durata": 120,
+      "citta_partenza": "Roma",
+      "citta_arrivo": "Firenze"
+    },
+    {
+      "id": 2,
+      "compagnia": "Italo",
+      "dataora_partenza": "2025-03-06T14:00:00",
+      "dataora_arrivo": "2025-03-06T15:30:00",
+      "durata": 90,
+      "citta_partenza": "Milano",
+      "citta_arrivo": "Torino"
+    }
+  ]
+  

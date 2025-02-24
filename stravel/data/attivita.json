@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "citta": "Roma",
+      "nomeattivita": "Colosseo Tour",
+      "durata": "2 hours",
+      "prezzo": 30.00
+    },
+    {
+      "id": 2,
+      "citta": "Milano",
+      "nomeattivita": "Galleria Vittorio Emanuele Visit",
+      "durata": "1 hour",
+      "prezzo": 15.00
+    }
+  ]
+  
