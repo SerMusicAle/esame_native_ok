@@ -1,3 +1,4 @@
+#END SERVER ---------------------------------------------------------
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import psycopg2
@@ -264,5 +265,7 @@ def get_attivita():
             print("Chiusura della connessione al database.")
             conn.close()
 
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    print("Avvio del server finale...")
+    app.run(host='0.0.0.0', port=5002, debug=True)
