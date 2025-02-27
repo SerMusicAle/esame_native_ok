@@ -4,7 +4,8 @@ import requests
 from flask_cors import CORS 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})  # Consente tutte le origini
+
 
 
 # login ---------------------------------------------------------------------------------------
@@ -21,17 +22,19 @@ def login():
     # Inoltra i dati al secondo server
     try:
         print("Inoltro dei dati al secondo server...")
-        response = requests.post('http://localhost:5002/login', json={"email": email, "password": password})
+        response = requests.post('http://localhost:5005/login', json={"email": email, "password": password})
         print(f"Risposta dal secondo server: {response.status_code} - {response.text}")
         
         return jsonify(response.json()), response.status_code
     except Exception as e:
         print("Si è verificato un errore durante l'inoltro della richiesta:", str(e))
         return jsonify({"error": "Errore durante l'inoltro della richiesta."}), 500
+    
+
 
 if __name__ == '__main__':
     print("Avvio del server di autenticazione...")
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    app.run(host='0.0.0.0', port=5006, debug=True)
     
     
     

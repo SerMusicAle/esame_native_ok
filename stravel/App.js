@@ -10,26 +10,40 @@ import Login from './components/Login';
 import ModalHotel from './components/ModalHotel';
 import ModalTransport from './components/ModalTransport';
 import ModalHome from './components/ModalHome';
+import ModalTreno from './components/ModalTreno';
+import ModalActivity from './components/ModalActivity';
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [searchVisible, setSearchVisible] = useState(false);
-  const [cartVisible, setCartVisible] = useState(false);
-  const [activeComponent, setActiveComponent] = useState({ component: ModalHome, props: {} });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const [searchVisible, setSearchVisible] = useState(false);
   const [searchResults, setSearchResults] = useState([]); 
   const [searchType, setSearchType] = useState('hotel');
-  const [userData, setUserData] = useState(null);
 
+  const [trainVisible, setTrainVisible] = useState(false);
+  const [trainResults, setTrainResults] = useState([]); 
+  const [trainType, setTrainType] = useState('treno');
+
+  const [activityVisible, setActivityVisible] = useState(false);
+  const [activityResults, setActivityResults] = useState([]); 
+  const [activityType, setActivityType] = useState('activity'); 
+
+  const [cartVisible, setCartVisible] = useState(false);
+
+  const [userData, setUserData] = useState(null);
+  const [activeComponent, setActiveComponent] = useState({ component: ModalHome, props: {} });
+  
+  
   // Dati del carrello
-  const cartItems = [
-    { id: 1, title: "Elemento 1", description: "Descrizione dell'elemento 1", image: require('./assets/logo.png') },
-    { id: 2, title: "Elemento 2", description: "Descrizione dell'elemento 2", image: require('./assets/logo.png') },
-    { id: 3, title: "Elemento 3", description: "Descrizione dell'elemento 3", image: require('./assets/logo.png') },
-    { id: 4, title: "Elemento 4", description: "Descrizione dell'elemento 1", image: require('./assets/logo.png') },
-    { id: 5, title: "Elemento 5", description: "Descrizione dell'elemento 2", image: require('./assets/logo.png') },
-    { id: 6, title: "Elemento 6", description: "Descrizione dell'elemento 3", image: require('./assets/logo.png') },
-  ];
+  // const cartItems = [
+  //   { id: 1, title: "Elemento 1", description: "Descrizione dell'elemento 1", image: require('./assets/logo.png') },
+  //   { id: 2, title: "Elemento 2", description: "Descrizione dell'elemento 2", image: require('./assets/logo.png') },
+  //   { id: 3, title: "Elemento 3", description: "Descrizione dell'elemento 3", image: require('./assets/logo.png') },
+  //   { id: 4, title: "Elemento 4", description: "Descrizione dell'elemento 1", image: require('./assets/logo.png') },
+  //   { id: 5, title: "Elemento 5", description: "Descrizione dell'elemento 2", image: require('./assets/logo.png') },
+  //   { id: 6, title: "Elemento 6", description: "Descrizione dell'elemento 3", image: require('./assets/logo.png') },
+  // ];
 
   const handleLogin = (user) => {
     setIsLoggedIn(true);
@@ -41,6 +55,20 @@ const App = () => {
     setSearchType(type); 
     setSearchVisible(false);
   };
+
+  const trainSearch = (results, type) =>
+  {
+    setTrainResults(results);
+    setTrainType(type); 
+    setTrainVisible(false);
+  }
+
+  const activitySearch = (results, type) =>
+    {
+      setActivityResults(results);
+      setActivityType(type); 
+      setActivityVisible(false);
+    }
 
   return (
     <View style={styles.container}>
@@ -74,24 +102,41 @@ const App = () => {
           {/* Barra inferiore */}
           <Footer 
             setSearchVisible={setSearchVisible}
+            setTrainVisible={setTrainVisible}
             setCartVisible={setCartVisible}
+            setActivityVisible={setActivityVisible}
             setActiveComponent={setActiveComponent}
           />
 
           {/* Modulo Carrello */}
-          <ModalCart 
+          {/* <ModalCart 
             visible={cartVisible} 
             onClose={() => setCartVisible(false)} 
             cartItems={cartItems} 
           />
-          
-          {/* Modulo Ricerca Viaggi */}
+           */}
+          {/* Modulo Ricerca Hotel */}
           <ModalHotel
             visible={searchVisible} 
             onClose={() => setSearchVisible(false)} 
             setActiveComponent={setActiveComponent}
           />
+
+          {/* Modulo Ricerca Viaggi */}
+          <ModalTreno
+            visible={trainVisible} 
+            onClose={() => setTrainVisible(false)} 
+            setActiveComponent={setActiveComponent}
+          />
+
+          {/* Modulo Ricerca Attività */}
+          <ModalActivity
+            visible={activityVisible} 
+            onClose={() => setActivityVisible(false)} 
+            setActiveComponent={setActiveComponent}
+          />
           </>
+          
       )}
 
     </View>

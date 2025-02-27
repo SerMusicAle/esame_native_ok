@@ -1,46 +1,10 @@
 [
     {
         "id": 1,
-        "email": "alessandrosereni@stravel.it",
-        "password": "password",
-        "nome": "Alessandro",
-        "cognome": "Sereni"
-    },
-    {
-        "id": 2,
-        "email": "mariorossi@stravel.it",
-        "password": "password",
-        "nome": "Mario",
-        "cognome": "Rossi"
-    },
-    {
-        "id": 3,
-        "email": "annabianchi@stravel.it",
-        "password": "password",
-        "nome": "Anna",
-        "cognome": "Bianchi"
-    },
-    {
-        "id": 4,
-        "email": "test@test.it",
-        "password": "test",
-        "nome": "Test Nome",
-        "cognome": "Test Cognome"
-    },
-    {
-        "id": 5,
         "email": "maurizionataloni@stravel.it",
         "password": "uforobot",
         "nome": "Maurizio",
         "cognome": "Nataloni"
-        
-    },
-    {
-        "id": 5,
-        "email": "a",
-        "password": "a",
-        "nome": "io",
-        "cognome": "io"
         
     }
 ]

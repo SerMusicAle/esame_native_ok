@@ -8,39 +8,47 @@ import { CheckBox } from 'react-native-elements';
 const { width } = Dimensions.get('window');
 
 //OGGETTO LOGINDATA
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin }) => 
+{
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [userData, setUserData] = useState(null);
   const [rememberMe, setRememberMe] = useState(false);
-  const [error, setError] = useState('');  // Stato per l'errore di login
+  const [error, setError] = useState('');
 
   const handleLogin = async () => {
-    // Controlla che entrambi i campi siano compilati
-    if (!username || !password) {
+    if (!username || !password) 
+    {
       setError('Entrambi i campi sono obbligatori.');
       return;
     }
 
-    const loginData = {
+    const loginData = 
+    {
       email: username,
       password: password,
     };
 
-    try {
-      const response = await axios.post('http://127.0.0.1:5001/login', loginData);
+    try 
+    {
+      const response = await axios.post('http://127.0.0.1:5010/login', loginData);
       if (response.status === 200) {
         setUserData(response.data.user);
         console.log(response.data.user);
 
         Alert.alert("Login riuscito!", response.data.message);
         onLogin(response.data.user);
-        setError('');  // Resetta l'errore in caso di login riuscito
+        setError('');
       }
-    } catch (error) {
-      if (error.response) {
-        setError(error.response.data.error || "Credenziali errate.");  // Mostra l'errore restituito dal server
-      } else {
+    } 
+    catch (error) 
+    {
+      if (error.response) 
+        {
+        setError(error.response.data.error || "Credenziali errate.");
+      }
+      else 
+      {
         setError("Si è verificato un errore durante il login.");
       }
     }

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, Modal, TextInput, Picker } from 'react-native';
 import axios from 'axios';
-import ResultsHotel from './ResultsHotel'; 
+import ResultsActivity from './ResultsActivity'; 
 
-const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
+const ModalActivity = ({ visible, onClose, setActiveComponent }) => 
+{
   const [city, setCity] = useState('');
-  const [minPrice, setMinPrice] = useState('');
+  const [minPrice, setMinPrice] = useState('');    
   const [maxPrice, setMaxPrice] = useState('');
-  const [hotelResults, setHotelResults] = useState([]);
+  const [activityResults, setActivityResults] = useState([]);
 
-  const handleSearch = async () => {
-    const searchData = 
+  const activitySearch = async () => {
+    const results = 
     {
       citta: city,  
       minPrice: minPrice ? parseFloat(minPrice) : undefined,
@@ -19,13 +20,13 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
 
     try {
 
-      const response = await axios.post('http://localhost:5010/cercaHotel', searchData);
+      const response = await axios.post('http://localhost:5010/cercaAttivita', results);
 
       console.log('Dati ricevuti dal server:', response.data);
 
-      setHotelResults(response.data);
+      setActivityResults(response.data);
 
-      setActiveComponent({ component: ResultsHotel, props: { results: response.data } });
+      setActiveComponent({ component: ResultsActivity, props: { results: response.data } });
 
     } 
     catch (error) 
@@ -44,7 +45,7 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
       onRequestClose={onClose}
     >
       <View style={styles.modalView}>
-        <Text style={styles.modalText}>Cerca Hotel</Text>
+        <Text style={styles.modalText}>Cerca Attività</Text>
         
         {/* Picker per la città */}
         <Picker
@@ -85,7 +86,7 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
         />
 
         {/* Bottone per la ricerca */}
-        <Button title="Cerca" onPress={handleSearch} />
+        <Button title="Cerca" onPress={activitySearch} />
 
         {/* Separator e bottone per chiudere */}
         <View style={styles.buttonSpacer} />
@@ -130,4 +131,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalHotel;
+export default ModalActivity;

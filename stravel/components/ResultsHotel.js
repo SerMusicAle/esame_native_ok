@@ -1,49 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
-import axios from 'axios';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-const ResultsHotel = ({ city, minPrice, maxPrice }) => {
-  const [hotels, setHotels] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const ResultsHotel = ({ results }) => 
+  {
 
-  useEffect(() => {
-    const fetchHotels = async () => {
-      try {
-        const response = await axios.post('http://localhost:5003/hotelCerca', {
-          city,
-          minPrice,
-          maxPrice,
-        });
-        setHotels(response.data);
-      } catch (err) {
-        setError('Errore nel recupero dei dati degli hotel.');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchHotels();
-  }, [city, minPrice, maxPrice]);
-
-  if (loading) {
-    return <ActivityIndicator size="large" color="#0000ff" />;
-  }
-
-  if (error) {
+  if (!results || results.length === 0) 
+  {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>{error}</Text>
+        <Text style={styles.noResultsText}>Nessun hotel trovato.</Text>
       </View>
     );
   }
 
+
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.title}>{city}</Text>
-      {hotels.map((hotel, index) => (
+
+      {results.map((hotel, index) => 
+      (
         <View key={index} style={styles.card}>
+          <Text style={styles.hotelCity}>{hotel.città}</Text>
           <Text style={styles.hotelName}>{hotel.nome}</Text>
           <Text>Indirizzo: {hotel.indirizzo}</Text>
           <Text>Prezzo: {hotel.costostanza} €</Text>
@@ -51,8 +28,7 @@ const ResultsHotel = ({ city, minPrice, maxPrice }) => {
       ))}
     </ScrollView>
   );
-};
-
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -60,10 +36,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   title: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
     marginBottom: 20,
-    textAlign: 'center',
+    textAlign: 'center', 
+    color: '#333',
   },
   card: {
     backgroundColor: '#fff',
@@ -83,10 +60,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  errorText: {
-    color: 'red',
+  noResultsText: {
     textAlign: 'center',
     marginTop: 20,
+    fontSize: 18,
+    color: '#555',
   },
 });
 
