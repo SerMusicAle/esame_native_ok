@@ -1,7 +1,7 @@
 // components/BodyContent.js
 import React from 'react';
-import ModalHome from './ModalHome';
-import ModalTransport from './ModalTransport';
+import ModalHome from '../components/Home/ModalHome';
+import ModalTransport from '../components/Transport/ModalTransport';
 
 const BodyContent = ({ activeComponent }) => {
   switch (activeComponent) {

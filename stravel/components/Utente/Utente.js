@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, Modal } from 'react-native';
+import Copyright from './Copyright';
 
-const ModalMenu = ({ visible, onClose, userName, email, onLogout }) => {
+
+const Utente = ({ visible, onClose, userName, email, onLogout }) => {
   return (
     <Modal
       animationType="slide"
@@ -18,8 +20,12 @@ const ModalMenu = ({ visible, onClose, userName, email, onLogout }) => {
         <View style={styles.logoutContainer}>
           <Button title="Disconnetti" onPress={onLogout} />
         </View>
+        <Copyright />
       </View>
+
     </Modal>
+
+
   );
 };
 
@@ -54,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalMenu;
+export default Utente;

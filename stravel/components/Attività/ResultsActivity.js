@@ -19,21 +19,16 @@ const ResultsActivity = ({ results }) => {
         <>
           {results.map((attivita, index) => (
             <View key={index} style={styles.card}>
-              <Text style={styles.activityName}>{attivita["Tipo Attività"]}</Text>
-              <Text>Durata: {attivita.Durata}</Text>
-              <Text>Prezzo: {attivita.Prezzo} €</Text>
-              <Text>Città: {attivita.Città}</Text>
+              <Text style={styles.activityCity}>{attivita.citta}</Text>
+              <Text style={styles.activityName}>{attivita.nomeattivita}</Text>
+              <Text>Durata: {attivita.durata}</Text>
+            <Text>Prezzo: {attivita.prezzo} €</Text>
             </View>
           ))}
         </>
       ) : (
         <Text style={styles.noResultsText}>Nessuna attività trovata.</Text>
       )}
-  
-      {/* Stampa l'oggetto ricevuto come testo visibile */}
-      {/* <View style={styles.debugContainer}>
-        <Text style={styles.debugText}>Oggetto ricevuto: {JSON.stringify(results, null, 2)}</Text>
-      </View> */}
     </ScrollView>
   );
   

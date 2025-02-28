@@ -16,7 +16,7 @@ const Header = ({ onMenuPress, nome, cognome }) =>
       </View>
 
       <Image 
-        source={require('../assets/logo.png')} 
+        source={require('../../assets/logo.png')} 
         style={styles.logo} 
         resizeMode="contain" 
       />

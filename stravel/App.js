@@ -1,17 +1,20 @@
 import styles from './AppStyle';
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import Header from './components/Header';
-import ModalCart from './components/ModalCart';
-import Footer from './components/Footer';
-import ModalMenu from './components/ModalMenu';
-import BodyContent from './components/BodyContent';
-import Login from './components/Login';
-import ModalHotel from './components/ModalHotel';
-import ModalTransport from './components/ModalTransport';
-import ModalHome from './components/ModalHome';
-import ModalTreno from './components/ModalTreno';
-import ModalActivity from './components/ModalActivity';
+import Header from './components/Header/Header';
+
+
+import Utente from './components/Utente/Utente';
+
+import Login from './components/Login/Login';
+import ModalHotel from './components/Hotel/ModalHotel';
+
+import ModalHome from './components/Home/ModalHome';
+import ModalTransport from './components/Transport/ModalTransport';
+import ModalActivity from './components/Attività/ModalActivity';
+
+import Footer from './components/Footer/Footer';
+
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -34,16 +37,6 @@ const App = () => {
   const [userData, setUserData] = useState(null);
   const [activeComponent, setActiveComponent] = useState({ component: ModalHome, props: {} });
   
-  
-  // Dati del carrello
-  // const cartItems = [
-  //   { id: 1, title: "Elemento 1", description: "Descrizione dell'elemento 1", image: require('./assets/logo.png') },
-  //   { id: 2, title: "Elemento 2", description: "Descrizione dell'elemento 2", image: require('./assets/logo.png') },
-  //   { id: 3, title: "Elemento 3", description: "Descrizione dell'elemento 3", image: require('./assets/logo.png') },
-  //   { id: 4, title: "Elemento 4", description: "Descrizione dell'elemento 1", image: require('./assets/logo.png') },
-  //   { id: 5, title: "Elemento 5", description: "Descrizione dell'elemento 2", image: require('./assets/logo.png') },
-  //   { id: 6, title: "Elemento 6", description: "Descrizione dell'elemento 3", image: require('./assets/logo.png') },
-  // ];
 
   const handleLogin = (user) => {
     setIsLoggedIn(true);
@@ -84,7 +77,7 @@ const App = () => {
           />
 
           {/* Modulo menu a scomparsa */}
-          <ModalMenu 
+          <Utente 
             visible={modalVisible} 
             onClose={() => setModalVisible(false)} 
             userName={`${userData.nome} ${userData.cognome}`} 
@@ -96,8 +89,8 @@ const App = () => {
             }} 
 />
 
-          {/* Contenuto centrale */}
-          {/* <BodyContent activeComponent={activeComponent} /> */}
+
+
           {activeComponent && React.createElement(activeComponent.component, activeComponent.props)}
           {/* Barra inferiore */}
           <Footer 
@@ -123,7 +116,7 @@ const App = () => {
           />
 
           {/* Modulo Ricerca Viaggi */}
-          <ModalTreno
+          <ModalTransport
             visible={trainVisible} 
             onClose={() => setTrainVisible(false)} 
             setActiveComponent={setActiveComponent}
@@ -138,6 +131,8 @@ const App = () => {
           </>
           
       )}
+    
+
 
     </View>
   );

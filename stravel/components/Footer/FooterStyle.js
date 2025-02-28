@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
       justifyContent: 'space-around',
       padding: 10,
       backgroundColor: '#6200EE',
-    },
+      paddingBottom: 20
+      },
     footerButton: {
       alignItems: 'center',
     },

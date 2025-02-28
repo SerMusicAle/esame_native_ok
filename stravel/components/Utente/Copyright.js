@@ -6,7 +6,9 @@ const Copyright = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.copyrightText}>
-        © 2025 S Management. Sviluppato da Alessandro Sereni. Tutti i diritti riservati.
+        © 2025 S Management{'\n'}
+        developer: Alessandro Sereni{'\n'}
+        Tutti i diritti riservati.
       </Text>
     </View>
   );
@@ -19,8 +21,9 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   copyrightText: {
-    fontSize: 12,
-    color: '#888',
+    fontSize: 14,
+    color: 'white', 
+    textAlign: 'center',
   },
 });
 

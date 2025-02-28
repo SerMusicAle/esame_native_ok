@@ -1,17 +1,415 @@
 [
-    {
-      "id": 1,
-      "citta": "Roma",
-      "nomeattivita": "Colosseo Tour",
-      "durata": "2 hours",
-      "prezzo": 30.00
-    },
-    {
-      "id": 2,
-      "citta": "Milano",
-      "nomeattivita": "Galleria Vittorio Emanuele Visit",
-      "durata": "1 hour",
-      "prezzo": 15.00
-    }
-  ]
-  
+  {
+    "id": 1,
+    "citta": "Roma",
+    "nomeattivita": "Colosseo Tour",
+    "durata": "2 hours",
+    "prezzo": 30.00
+  },
+  {
+    "id": 2,
+    "citta": "Milano",
+    "nomeattivita": "Galleria Vittorio Emanuele Visit",
+    "durata": "1 hour",
+    "prezzo": 15.00
+  },
+  {
+    "id": 3,
+    "citta": "Roma",
+    "nomeattivita": "Colosseo Tour",
+    "durata": "2 hours",
+    "prezzo": 30.00
+  },
+  {
+    "id": 4,
+    "citta": "Milano",
+    "nomeattivita": "Galleria Vittorio Emanuele Visit",
+    "durata": "1 hour",
+    "prezzo": 15.00
+  },
+  {
+    "id": 5,
+    "citta": "Napoli",
+    "nomeattivita": "Vesuvio Tour",
+    "durata": "3 hours",
+    "prezzo": 45.00
+  },
+  {
+    "id": 6,
+    "citta": "Firenze",
+    "nomeattivita": "Uffizi Gallery",
+    "durata": "2 hours",
+    "prezzo": 20.00
+  },
+  {
+    "id": 7,
+    "citta": "Venezia",
+    "nomeattivita": "Gondola Ride",
+    "durata": "30 minutes",
+    "prezzo": 50.00
+  },
+  {
+    "id": 8,
+    "citta": "Torino",
+    "nomeattivita": "Egyptian Museum Tour",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 18.00
+  },
+  {
+    "id": 9,
+    "citta": "Bologna",
+    "nomeattivita": "Piazza Maggiore Walking Tour",
+    "durata": "1 hour",
+    "prezzo": 12.00
+  },
+  {
+    "id": 10,
+    "citta": "Genova",
+    "nomeattivita": "Aquarium of Genoa",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  },
+  {
+    "id": 11,
+    "citta": "Palermo",
+    "nomeattivita": "Catacombs Tour",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 22.00
+  },
+  {
+    "id": 12,
+    "citta": "Catania",
+    "nomeattivita": "Etna Volcano Tour",
+    "durata": "4 hours",
+    "prezzo": 60.00
+  },
+  {
+    "id": 13,
+    "citta": "Lecce",
+    "nomeattivita": "Baroque Tour",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 10.00
+  },
+  {
+    "id": 14,
+    "citta": "Rimini",
+    "nomeattivita": "Beachfront Leisure",
+    "durata": "2 hours",
+    "prezzo": 20.00
+  },
+  {
+    "id": 15,
+    "citta": "Roma",
+    "nomeattivita": "Vatican Museums Tour",
+    "durata": "3 hours",
+    "prezzo": 35.00
+  },
+  {
+    "id": 16,
+    "citta": "Roma",
+    "nomeattivita": "Pantheon Visit",
+    "durata": "1 hour",
+    "prezzo": 10.00
+  },
+  {
+    "id": 17,
+    "citta": "Roma",
+    "nomeattivita": "Roman Forum Tour",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  },
+  {
+    "id": 18,
+    "citta": "Roma",
+    "nomeattivita": "Borghese Gallery",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 20.00
+  },
+  {
+    "id": 19,
+    "citta": "Roma",
+    "nomeattivita": "Trevi Fountain Photography",
+    "durata": "30 minutes",
+    "prezzo": 5.00
+  },
+  {
+    "id": 20,
+    "citta": "Milano",
+    "nomeattivita": "Duomo Cathedral Visit",
+    "durata": "1 hour",
+    "prezzo": 15.00
+  },
+  {
+    "id": 21,
+    "citta": "Milano",
+    "nomeattivita": "Sforza Castle Tour",
+    "durata": "2 hours",
+    "prezzo": 18.00
+  },
+  {
+    "id": 22,
+    "citta": "Milano",
+    "nomeattivita": "Leonardo da Vinci Museum",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 20.00
+  },
+  {
+    "id": 23,
+    "citta": "Milano",
+    "nomeattivita": "Brera Art Gallery",
+    "durata": "1 hour",
+    "prezzo": 12.00
+  },
+  {
+    "id": 24,
+    "citta": "Milano",
+    "nomeattivita": "Navigli Canals Walking Tour",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  },
+  {
+    "id": 25,
+    "citta": "Napoli",
+    "nomeattivita": "Naples Underground Tour",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 20.00
+  },
+  {
+    "id": 26,
+    "citta": "Napoli",
+    "nomeattivita": "Pompeii Ruins Visit",
+    "durata": "3 hours",
+    "prezzo": 40.00
+  },
+  {
+    "id": 27,
+    "citta": "Napoli",
+    "nomeattivita": "Vesuvius Hike",
+    "durata": "4 hours",
+    "prezzo": 30.00
+  },
+  {
+    "id": 28,
+    "citta": "Napoli",
+    "nomeattivita": "Spaccanapoli Walking Tour",
+    "durata": "2 hours",
+    "prezzo": 15.00
+  },
+  {
+    "id": 29,
+    "citta": "Napoli",
+    "nomeattivita": "Naples Pizza Making Class",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  },
+  {
+    "id": 30,
+    "citta": "Firenze",
+    "nomeattivita": "Piazza del Duomo Visit",
+    "durata": "1 hour",
+    "prezzo": 12.00
+  },
+  {
+    "id": 31,
+    "citta": "Firenze",
+    "nomeattivita": "Ponte Vecchio Tour",
+    "durata": "1 hour",
+    "prezzo": 10.00
+  },
+  {
+    "id": 32,
+    "citta": "Firenze",
+    "nomeattivita": "Florence Wine Tasting",
+    "durata": "2 hours",
+    "prezzo": 30.00
+  },
+  {
+    "id": 33,
+    "citta": "Firenze",
+    "nomeattivita": "Boboli Gardens Walk",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 15.00
+  },
+  {
+    "id": 34,
+    "citta": "Firenze",
+    "nomeattivita": "Florence Cooking Class",
+    "durata": "2 hours",
+    "prezzo": 40.00
+  },
+  {
+    "id": 35,
+    "citta": "Venezia",
+    "nomeattivita": "St. Mark’s Basilica Visit",
+    "durata": "1 hour",
+    "prezzo": 15.00
+  },
+  {
+    "id": 36,
+    "citta": "Venezia",
+    "nomeattivita": "Doge’s Palace Tour",
+    "durata": "2 hours",
+    "prezzo": 20.00
+  },
+  {
+    "id": 37,
+    "citta": "Venezia",
+    "nomeattivita": "Murano Glass Factory Visit",
+    "durata": "1 hour",
+    "prezzo": 25.00
+  },
+  {
+    "id": 38,
+    "citta": "Venezia",
+    "nomeattivita": "Rialto Market Walking Tour",
+    "durata": "1 hour",
+    "prezzo": 10.00
+  },
+  {
+    "id": 39,
+    "citta": "Venezia",
+    "nomeattivita": "Gondola Ride at Sunset",
+    "durata": "30 minutes",
+    "prezzo": 55.00
+  },
+  {
+    "id": 40,
+    "citta": "Torino",
+    "nomeattivita": "Mole Antonelliana Visit",
+    "durata": "1 hour",
+    "prezzo": 12.00
+  },
+  {
+    "id": 41,
+    "citta": "Torino",
+    "nomeattivita": "Egyptian Museum Tour",
+    "durata": "2 hours",
+    "prezzo": 18.00
+  },
+  {
+    "id": 42,
+    "citta": "Torino",
+    "nomeattivita": "Royal Palace Visit",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 20.00
+  },
+  {
+    "id": 43,
+    "citta": "Torino",
+    "nomeattivita": "Basilica di Superga Tour",
+    "durata": "2 hours",
+    "prezzo": 15.00
+  },
+  {
+    "id": 44,
+    "citta": "Torino",
+    "nomeattivita": "Wine Tasting in Langhe",
+    "durata": "3 hours",
+    "prezzo": 30.00
+  },
+  {
+    "id": 45,
+    "citta": "Bologna",
+    "nomeattivita": "Towers of Bologna Visit",
+    "durata": "1 hour",
+    "prezzo": 10.00
+  },
+  {
+    "id": 46,
+    "citta": "Bologna",
+    "nomeattivita": "Fico Eataly World Tour",
+    "durata": "2 hours",
+    "prezzo": 20.00
+  },
+  {
+    "id": 47,
+    "citta": "Bologna",
+    "nomeattivita": "Bologna Walking Tour",
+    "durata": "2 hours",
+    "prezzo": 15.00
+  },
+  {
+    "id": 48,
+    "citta": "Bologna",
+    "nomeattivita": "Bologna Cooking Class",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  },
+  {
+    "id": 49,
+    "citta": "Bologna",
+    "nomeattivita": "San Luca Sanctuary Hike",
+    "durata": "3 hours",
+    "prezzo": 20.00
+  },
+  {
+    "id": 50,
+    "citta": "Genova",
+    "nomeattivita": "Aquarium of Genoa Visit",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  },
+  {
+    "id": 51,
+    "citta": "Genova",
+    "nomeattivita": "Palazzo Ducale Tour",
+    "durata": "1 hour",
+    "prezzo": 15.00
+  },
+  {
+    "id": 52,
+    "citta": "Genova",
+    "nomeattivita": "Via Garibaldi Walking Tour",
+    "durata": "1 hour 30 minutes",
+    "prezzo": 12.00
+  },
+  {
+    "id": 53,
+    "citta": "Genova",
+    "nomeattivita": "Lanterna of Genoa Visit",
+    "durata": "1 hour",
+    "prezzo": 10.00
+  },
+  {
+    "id": 54,
+    "citta": "Genova",
+    "nomeattivita": "Genoa Harbour Boat Tour",
+    "durata": "1 hour",
+    "prezzo": 18.00
+  },
+  {
+    "id": 55,
+    "citta": "Palermo",
+    "nomeattivita": "Palermo Cathedral Visit",
+    "durata": "1 hour",
+    "prezzo": 10.00
+  },
+  {
+    "id": 56,
+    "citta": "Palermo",
+    "nomeattivita": "Norman Palace Tour",
+    "durata": "2 hours",
+    "prezzo": 15.00
+  },
+  {
+    "id": 57,
+    "citta": "Palermo",
+    "nomeattivita": "Teatro Massimo Tour",
+    "durata": "1 hour",
+    "prezzo": 12.00
+  },
+  {
+    "id": 58,
+    "citta": "Palermo",
+    "nomeattivita": "Capuchin Catacombs Visit",
+    "durata": "1 hour",
+    "prezzo": 18.00
+  },
+  {
+    "id": 59,
+    "citta": "Palermo",
+    "nomeattivita": "Palermo Street Food Tour",
+    "durata": "2 hours",
+    "prezzo": 25.00
+  }
+]

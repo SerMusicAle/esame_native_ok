@@ -20,7 +20,7 @@ const ResultsHotel = ({ results }) =>
       {results.map((hotel, index) => 
       (
         <View key={index} style={styles.card}>
-          <Text style={styles.hotelCity}>{hotel.città}</Text>
+          <Text style={styles.hotelCity}>{hotel.citta}</Text>
           <Text style={styles.hotelName}>{hotel.nome}</Text>
           <Text>Indirizzo: {hotel.indirizzo}</Text>
           <Text>Prezzo: {hotel.costostanza} €</Text>

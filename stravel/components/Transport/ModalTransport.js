@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, Modal, Picker } from 'react-native';
 import axios from 'axios';
-import ResultsTreno from './ResultsTreno';
+import ResultsTreno from './ResultsTransport';
 
-const ModalTreno = ({ visible, onClose, setActiveComponent }) => {
+const ModalTransport = ({ visible, onClose, setActiveComponent }) => {
   const [city_start, setCityStart] = useState('');
   const [city_stop, setCityStop] = useState('');
   const [transportType, setTransportType] = useState('treno'); // Stato per il tipo di trasporto
@@ -134,4 +134,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalTreno;
+export default ModalTransport;

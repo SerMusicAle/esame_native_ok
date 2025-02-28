@@ -60,7 +60,7 @@ const Login = ({ onLogin }) =>
 
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/logo.png')} style={styles.backgroundImage} />
+      <Image source={require('../../assets/logo.png')} style={styles.backgroundImage} />
       <View style={styles.formContainer}>
         {/* <Text style={styles.title}>Login</Text> */}
         <TextInput

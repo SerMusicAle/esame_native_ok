@@ -8,7 +8,7 @@ const ModalHome = () => {
   return (
 
       <View style={styles.container}>
-         <Image source={require('../assets/logo.png')} style={styles.backgroundImage} />
+         <Image source={require('../../assets/logo.png')} style={styles.backgroundImage} />
 
         <Text style={styles.welcomeText}>Ben Tornato. Insieme realizzeremo il viaggio dei tuoi Sogni</Text>
         

@@ -46,13 +46,13 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
       <View style={styles.modalView}>
         <Text style={styles.modalText}>Cerca Hotel</Text>
         
-        {/* Picker per la città */}
+        {/* Picker per la citta */}
         <Picker
           selectedValue={city}
           style={styles.picker}
           onValueChange={(itemValue) => setCity(itemValue)}
         >
-          <Picker.Item label="Seleziona città" value="" />
+          <Picker.Item label="Seleziona citta" value="" />
           <Picker.Item label="Roma" value="Roma" />
           <Picker.Item label="Milano" value="Milano" />
           <Picker.Item label="Napoli" value="Napoli" />

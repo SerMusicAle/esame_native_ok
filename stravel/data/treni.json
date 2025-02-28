@@ -1,21 +1,533 @@
 [
     {
-      "id": 1,
-      "compagnia": "Trenitalia",
-      "dataora_partenza": "2025-03-02T09:00:00",
-      "dataora_arrivo": "2025-03-02T11:00:00",
-      "durata": 120,
-      "citta_partenza": "Roma",
-      "citta_arrivo": "Firenze"
+        "id": 1,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-01T09:00:00",
+        "dataora_arrivo": "2025-03-01T11:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
     },
     {
-      "id": 2,
-      "compagnia": "Italo",
-      "dataora_partenza": "2025-03-06T14:00:00",
-      "dataora_arrivo": "2025-03-06T15:30:00",
-      "durata": 90,
-      "citta_partenza": "Milano",
-      "citta_arrivo": "Torino"
+        "id": 2,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-02T10:00:00",
+        "dataora_arrivo": "2025-03-02T12:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
+    },
+    {
+        "id": 3,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-03T11:00:00",
+        "dataora_arrivo": "2025-03-03T13:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
+    },
+    {
+        "id": 4,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-04T12:00:00",
+        "dataora_arrivo": "2025-03-04T14:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
+    },
+    {
+        "id": 5,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-05T13:00:00",
+        "dataora_arrivo": "2025-03-05T15:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
+    },
+    {
+        "id": 6,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-06T14:00:00",
+        "dataora_arrivo": "2025-03-06T16:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
+    },
+    {
+        "id": 7,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-07T15:00:00",
+        "dataora_arrivo": "2025-03-07T17:00:00",
+        "durata": "120",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Firenze"
+    },
+    {
+        "id": 8,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-01T17:00:00",
+        "dataora_arrivo": "2025-03-01T19:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 9,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-02T18:00:00",
+        "dataora_arrivo": "2025-03-02T20:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 10,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-03T19:00:00",
+        "dataora_arrivo": "2025-03-03T21:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 11,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-04T20:00 :00",
+        "dataora_arrivo": "2025-03-04T22:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 12,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-05T21:00:00",
+        "dataora_arrivo": "2025-03-05T23:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 13,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-06T22:00:00",
+        "dataora_arrivo": "2025-03-06T00:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 14,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-07T23:00:00",
+        "dataora_arrivo": "2025-03-08T01:00:00",
+        "durata": "120",
+        "citta_partenza": "Firenze",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 15,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-08T09:00:00",
+        "dataora_arrivo": "2025-03-08T10:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 16,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-09T10:00:00",
+        "dataora_arrivo": "2025-03-09T11:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 17,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-10T11:00:00",
+        "dataora_arrivo": "2025-03-10T12:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 18,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-11T12:00:00",
+        "dataora_arrivo": "2025-03-11T13:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 19,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-12T13:00:00",
+        "dataora_arrivo": "2025-03-12T14:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 20,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-13T14:00:00",
+        "dataora_arrivo": "2025-03-13T15:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 21,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-14T15:00:00",
+        "dataora_arrivo": "2025-03-14T16:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Torino"
+    },
+    {
+        "id": 22,
+        "compagnia": "Italo",
+        "dataora_partenza ": "2025-03-08T17:00:00",
+        "dataora_arrivo": "2025-03-08T18:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 23,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-09T18:00:00",
+        "dataora_arrivo": "2025-03-09T19:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 24,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-10T19:00:00",
+        "dataora_arrivo": "2025-03-10T20:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 25,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-11T20:00:00",
+        "dataora_arrivo": "2025-03-11T21:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 26,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-12T21:00:00",
+        "dataora_arrivo": "2025-03-12T22:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 27,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-13T22:00:00",
+        "dataora_arrivo": "2025-03-14T23:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 28,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-14T23:00:00",
+        "dataora_arrivo": "2025-03-15T00:30:00",
+        "durata": "90",
+        "citta_partenza": "Torino",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 29,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-15T09:00:00",
+        "dataora_arrivo": "2025-03-15T11:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 30,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-16T10:00:00",
+        "dataora_arrivo": "2025-03-16T12:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 31,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-17T11:00:00",
+        "dataora_arrivo": "2025-03-17T13:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 32,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-18T12:00:00",
+        "dataora_arrivo": "2025-03-18T14:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id":  33,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-19T13:00:00",
+        "dataora_arrivo": "2025-03-19T15:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 34,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-20T14:00:00",
+        "dataora_arrivo": "2025-03-20T16:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 35,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-21T15:00:00",
+        "dataora_arrivo": "2025-03-21T17:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 36,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-22T16:00:00",
+        "dataora_arrivo": "2025-03-22T18:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 37,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-23T17:00:00",
+        "dataora_arrivo": "2025-03-23T19:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 38,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-24T18:00:00",
+        "dataora_arrivo": "2025-03-24T20:30:00",
+        "durata": "150",
+        "citta_partenza": "Napoli",
+        "citta_arrivo": "Bologna"
+    },
+    {
+        "id": 39,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-15T17:00:00",
+        "dataora_arrivo": "2025-03-15T19:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 40,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-16T18:00:00",
+        "dataora_arrivo": "2025-03-16T20:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 41,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-17T19:00:00",
+        "dataora_arrivo": "2025-03-17T21:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 42,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-18T20:00:00",
+        "dataora_arrivo": "2025-03-18T22:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 43,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-19T21:00:00",
+        "dataora_arrivo": "2025-03-19T23:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 44,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-20T22:00:00",
+        "dataora_arrivo": "2025-03-21T00:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 45,
+        "compagnia": "Trenitalia",
+        "dataora_partenza": "2025-03-21T23:00:00",
+        "dataora_arrivo": "2025-03-22T01:30:00",
+        "durata": "150",
+        "citta_partenza": "Bologna",
+        "citta_arrivo": "Napoli"
+    },
+    {
+        "id": 46,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-22T09:00:00",
+        "dataora_arrivo": "2025-03-22T10:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 47,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-23T10:00:00",
+        "dataora_arrivo": "2025-03-23T11:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 48,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-24T11:00:00",
+        "dataora_arrivo": "2025-03-24T12:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 49,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-25T12:00:00",
+        "dataora_arrivo": "2025-03-25T13:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 50,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-26T13:00:00",
+        "dataora_arrivo": "2025-03-26T14:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 51,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-27T14:00:00",
+        "dataora_arrivo": "2025-03-27T15:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 52,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-28T15:00:00",
+        "dataora_arrivo": "2025-03-28T16:30:00",
+        "durata": "90",
+        "citta_partenza": "Roma",
+        "citta_arrivo": "Milano"
+    },
+    {
+        "id": 53,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-22T17:00:00",
+        "dataora_arrivo": "2025-03-22T18:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 54,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-23T18:00:00",
+        "dataora_arrivo": "2025-03-23T19:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 55,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-24T19:00:00",
+        "dataora_arrivo": "2025-03-24T20:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 56,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-25T20:00:00",
+        "dataora_arrivo": "2025-03-25T21:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 57,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-26T21:00:00",
+        "dataora_arrivo": "2025-03-26T22:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 58,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-27T22:00:00",
+        "dataora_arrivo": "2025-03-27T23:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
+    },
+    {
+        "id": 59,
+        "compagnia": "Italo",
+        "dataora_partenza": "2025-03-28T23:00:00",
+        "dataora_arrivo": "2025-03-29T00:30:00",
+        "durata": "90",
+        "citta_partenza": "Milano",
+        "citta_arrivo": "Roma"
     }
-  ]
-  
+]
