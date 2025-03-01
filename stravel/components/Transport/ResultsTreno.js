@@ -43,12 +43,12 @@ const ResultsTreno = ({ city_start, city_stop, transportType }) => {
     <ScrollView style={styles.container}>
       {results.map((item, index) => (
         <View key={index} style={styles.card}>
-          <Text style={styles.trenoName}>{transportType === 'treno' ? item.compagnia : item.compagnia}</Text>
-          <Text>{transportType === 'treno' ? `Partenza: ${item.dataora_partenza}` : `Partenza: ${item.dataora_partenza}`}</Text>
-          <Text>{transportType === 'treno' ? `Arrivo: ${item.dataora_arrivo}` : `Arrivo: ${item.dataora_arrivo}`}</Text>
-          <Text>{transportType === 'treno' ? `Durata: ${item.durata}` : `Durata: ${item.durata}`}</Text>
-          <Text>{transportType === 'treno' ? `Città di Partenza: ${item.citta_partenza}` : `Città di Partenza: ${item.citta_partenza}`}</Text>
-          <Text>{transportType === 'treno' ? `Città di Arrivo: ${item.citta_arrivo}` : `Città di Arrivo: ${item.citta_arrivo}`}</Text>
+          <Text style={styles.trenoName}>{item.compagnia}</Text>
+          <Text>{`Partenza: ${item.dataora_partenza}`}</Text>
+          <Text>{`Arrivo: ${item.dataora_arrivo}`}</Text>
+          <Text>{`Durata: ${item.durata}`}</Text>
+          <Text>{`Città di Partenza: ${item.citta_partenza}`}</Text>
+          <Text>{`Città di Arrivo: ${item.citta_arrivo}`}</Text>
         </View>
       ))}
     </ScrollView>

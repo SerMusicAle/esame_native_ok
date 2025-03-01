@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, Modal, Picker } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button, StyleSheet, Modal, Picker, Alert } from 'react-native';
 import axios from 'axios';
-import ResultsTreno from './ResultsTransport';
+import ResultsTreno from './ResultsTreno';
+import ResultsAereo from './ResultsAereo';
+
+
 
 const ModalTransport = ({ visible, onClose, setActiveComponent }) => {
   const [city_start, setCityStart] = useState('');
   const [city_stop, setCityStop] = useState('');
-  const [transportType, setTransportType] = useState('treno'); // Stato per il tipo di trasporto
+  const [transportType, setTransportType] = useState('treno');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showErrorPopup, setShowErrorPopup] = useState(false);
 
   const trainSearch = async () => {
     const searchData = {
@@ -15,22 +20,53 @@ const ModalTransport = ({ visible, onClose, setActiveComponent }) => {
       transportType,
     };
 
+    if (!transportType) {
+      setErrorMessage('Seleziona un mezzo di trasporto.');
+      setShowErrorPopup(true);
+      return;
+    }
+
+    if (!city_start || !city_stop) {
+      setErrorMessage('Non sono state selezionate città di partenza e  di destinazione.');
+      setShowErrorPopup(true);
+      return;
+    }
+
     try {
+      let response;
       if (transportType === "treno") {
-        await axios.post('http://localhost:5010/cercaTreno', searchData);
-        console.log('Dati inviati al server con successo', searchData);
+        response = await axios.post('http://localhost:5010/cercaTreno', searchData);
       } else if (transportType === "aereo") {
-        await axios.post('http://localhost:5010/cercaAereo', searchData);
-        console.log('Dati inviati al server con successo', searchData);
+        response = await axios.post('http://localhost:5010/cercaAereo', searchData);
+      }
+      console.log('Dati inviati al server con successo', searchData);
+      console.log('Risposta del server:', response.data);
+
+      if (response.data.length === 0) {
+        setErrorMessage('Non sono stati trovati risultati per la tua ricerca.'); // Alert
+        setShowErrorPopup(true);
+      return;
       }
 
-      // Imposta il componente attivo a ResultsTreno
-      setActiveComponent({ component: ResultsTreno, props: { city_start, city_stop, transportType } });
-      onClose(); // Chiudi il modal dopo aver impostato il componente attivo
+      const resultsComponent = transportType === "treno" ? ResultsTreno : ResultsAereo;
+      setActiveComponent({ component: resultsComponent, props: { city_start, city_stop, transportType } });
+      onClose();
     } catch (error) {
       console.error('Errore nell\'invio dei dati:', error);
     }
   };
+
+
+  useEffect(() => {
+    if (showErrorPopup) {
+      const timer = setTimeout(() => {
+        setShowErrorPopup(false);
+        setErrorMessage('');
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [showErrorPopup]);
+
 
   return (
     <Modal
@@ -63,13 +99,7 @@ const ModalTransport = ({ visible, onClose, setActiveComponent }) => {
           <Picker.Item label="Milano" value="Milano" />
           <Picker.Item label="Napoli" value="Napoli" />
           <Picker.Item label="Firenze" value="Firenze" />
-          <Picker.Item label="Venezia" value="Venezia" />
-          <Picker.Item label="Genova" value="Genova" />
-          <Picker.Item label="Palermo" value="Palermo" />
-          <Picker.Item label="Catania" value="Catania" />
-          <Picker.Item label="Lecce" value="Lecce" />
-          <Picker.Item label="Rimini" value="Rimini" />
-          <Picker.Item label="Torino" value="Torino" />
+
         </Picker>
 
         <Picker
@@ -82,18 +112,19 @@ const ModalTransport = ({ visible, onClose, setActiveComponent }) => {
           <Picker.Item label="Milano" value="Milano" />
           <Picker.Item label="Napoli" value="Napoli" />
           <Picker.Item label="Firenze" value="Firenze" />
-          <Picker.Item label="Venezia" value="Venezia" />
-          <Picker.Item label="Genova" value="Genova" />
-          <Picker.Item label="Palermo" value="Palermo" />
-          <Picker.Item label="Catania" value="Catania" />
-          <Picker.Item label="Lecce" value="Lecce" />
-          <Picker.Item label="Rimini" value="Rimini" />
-          <Picker.Item label="Torino" value="Torino" />
+
         </Picker>
 
         <Button title="Cerca" onPress={trainSearch} />
         <View style={styles.buttonSpacer} />
         <Button title="Chiudi" onPress={onClose} />
+
+        {/* Popup di errore */}
+        {showErrorPopup && (
+          <View style={styles.errorPopup}>
+            <Text style={styles.errorText}>{errorMessage}</Text>
+          </View>
+        )}
       </View>
     </Modal>
   );
@@ -131,6 +162,19 @@ const styles = StyleSheet.create({
   },
   buttonSpacer: {
     height: 10,
+  },
+  errorPopup: {
+    position: 'absolute',
+    bottom: 50,
+    left: 20,
+    right: 20,
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 5,
+  },
+  errorText: {
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
 });
 

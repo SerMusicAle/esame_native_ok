@@ -8,33 +8,61 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [hotelResults, setHotelResults] = useState([]);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showErrorPopup, setShowErrorPopup] = useState(false);
 
   const handleSearch = async () => {
-    const searchData = 
-    {
+    const searchData = {
       citta: city,  
       minPrice: minPrice ? parseFloat(minPrice) : undefined,
       maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
     };
 
+    // Controllo degli errori
+    if (!city) {
+      setErrorMessage('Seleziona una città.');
+      setShowErrorPopup(true);
+      return;
+    }
+
+    if (minPrice === '' || maxPrice === '') {
+      setErrorMessage('Inserisci sia il prezzo minimo che il prezzo massimo.');
+      setShowErrorPopup(true);
+      return;
+    }
+
+    if (isNaN(minPrice) || isNaN(maxPrice)) {
+      setErrorMessage('I prezzi devono essere numeri validi.');
+      setShowErrorPopup(true);
+      return;
+    }
+
+    if (minPrice && maxPrice && parseFloat(minPrice) > parseFloat(maxPrice)) {
+      setErrorMessage('Il prezzo minimo non può essere maggiore del prezzo massimo.');
+      setShowErrorPopup(true);
+      return;
+    }
+
     try {
-
       const response = await axios.post('http://localhost:5010/cercaHotel', searchData);
-
       console.log('Dati ricevuti dal server:', response.data);
-
       setHotelResults(response.data);
-
+      
+      if (response.data.length === 0) {
+        setErrorMessage('Non sono stati trovati risultati per la tua ricerca.');
+        setShowErrorPopup(true);
+        return;
+      }
+      
       setActiveComponent({ component: ResultsHotel, props: { results: response.data } });
-
-    } 
-    catch (error) 
-    {
+    } catch (error) {
       console.error('Errore nell\'invio dei dati:', error);
+      setErrorMessage('Si è verificato un errore durante la ricerca degli hotel.');
+      setShowErrorPopup(true);
     }
 
     onClose(); 
-    };
+  };
 
   return (
     <Modal
@@ -57,13 +85,6 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
           <Picker.Item label="Milano" value="Milano" />
           <Picker.Item label="Napoli" value="Napoli" />
           <Picker.Item label="Firenze" value="Firenze" />
-          <Picker.Item label="Venezia" value="Venezia" />
-          <Picker.Item label="Genova" value="Genova" />
-          <Picker.Item label="Palermo" value="Palermo" />
-          <Picker.Item label="Catania" value="Catania" />
-          <Picker.Item label="Lecce" value="Lecce" />
-          <Picker.Item label="Rimini" value="Rimini" />
-          <Picker.Item label="Torino" value="Torino" />
         </Picker>
 
         {/* Input per il prezzo minimo */}
@@ -90,6 +111,13 @@ const ModalHotel = ({ visible, onClose, setActiveComponent }) => {
         {/* Separator e bottone per chiudere */}
         <View style={styles.buttonSpacer} />
         <Button title="Chiudi" onPress={onClose} />
+
+        {/* Popup di errore */}
+        {showErrorPopup && (
+          <View style={styles.errorPopup}>
+            <Text style={styles.errorText}>{errorMessage}</Text>
+          </View>
+        )}
       </View>
     </Modal>
   );
@@ -122,11 +150,21 @@ const styles = StyleSheet.create({
     width: '100%',
     marginBottom: 10,
   },
-  button: {
-    marginVertical: 10,
-  },
   buttonSpacer: {
     height: 10,
+  },
+  errorPopup: {
+    position: 'absolute',
+    bottom: 50,
+    left: 20,
+    right: 20,
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 5,
+  },
+  errorText: {
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
 });
 
